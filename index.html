@@ -2773,6 +2773,62 @@ console.<span class="function">log</span>(student.<span class="function">display
       </div>
     </div>
 
+    <!-- 5.8 Addressing Modes -->
+    <div class="subtopic">
+      <h3><span class="topic-number">8</span> অ্যাড্রেসিং মোড (Addressing Modes)</h3>
+      <div class="definition">
+        <div class="term">অ্যাড্রেসিং মোড কী?</div>
+        <div class="meaning">অ্যাড্রেসিং মোড হলো অপারেন্ড নির্ধারণের পদ্ধতি। এটি বলে ডেটা কোথা থেকে আনতে হবে বা কোথায় পাঠাতে হবে।</div>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>মোড</th><th>বিবরণ</th><th>উদাহরণ</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Immediate</strong></td><td>ডেটা সরাসরি নির্দেশনায় দেওয়া থাকে</td><td><code>MVI A, 05H</code></td></tr>
+            <tr><td><strong>Direct</strong></td><td>মেমরি অ্যাড্রেস সরাসরি দেওয়া থাকে</td><td><code>LDA 2050H</code></td></tr>
+            <tr><td><strong>Register</strong></td><td>রেজিস্টার থেকে ডেটা নেওয়া হয়</td><td><code>MOV A, B</code></td></tr>
+            <tr><td><strong>Register Indirect</strong></td><td>রেজিস্টারে অ্যাড্রেস থাকে</td><td><code>MOV A, M</code></td></tr>
+            <tr><td><strong>Implied</strong></td><td>অপারেন্ড লাগে না</td><td><code>CMA</code>, <code>HLT</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 5.9 Flag Register -->
+    <div class="subtopic">
+      <h3><span class="topic-number">9</span> ফ্ল্যাগ রেজিস্টার</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>ফ্ল্যাগ</th><th>বিট</th><th>পূর্ণরূপ</th><th>বিবরণ</th></tr></thead>
+          <tbody>
+            <tr><td><strong>S</strong></td><td>D7</td><td>Sign Flag</td><td>ফলাফল ঋণাত্মক হলে S=1</td></tr>
+            <tr><td><strong>Z</strong></td><td>D6</td><td>Zero Flag</td><td>ফলাফল শূন্য হলে Z=1</td></tr>
+            <tr><td><strong>AC</strong></td><td>D4</td><td>Auxiliary Carry</td><td>নিম্ন বাইট থেকে ক্যারি হলে AC=1</td></tr>
+            <tr><td><strong>P</strong></td><td>D2</td><td>Parity Flag</td><td>1-এর সংখ্যা জোড় হলে P=1</td></tr>
+            <tr><td><strong>CY</strong></td><td>D0</td><td>Carry Flag</td><td>ক্যারি হলে CY=1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 5.10 Interrupts -->
+    <div class="subtopic">
+      <h3><span class="topic-number">10</span> ইন্টারাপ্ট (Interrupts)</h3>
+      <div class="definition">
+        <div class="term">ইন্টারাপ্ট কী?</div>
+        <div class="meaning">ইন্টারাপ্ট হলো CPU-এর বর্তমান কাজ থামিয়ে অন্য জরুরি কাজ করার সিগন্যাল। কাজ শেষে আগের কাজে ফিরে যায়।</div>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead><tr><th>প্রকার</th><th>বিবরণ</th><th>উদাহরণ</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Hardware</strong></td><td>বাইরের ডিভাইস থেকে আসে</td><td>TRAP, RST 7.5, RST 6.5, RST 5.5, INTR</td></tr>
+            <tr><td><strong>Software</strong></td><td>প্রোগ্রাম থেকে আসে</td><td>RST 0, RST 1, ..., RST 7</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <!-- Microprocessor Interview -->
     <div class="subtopic">
       <h3>🎤 মাইক্রোপ্রসেসর ইন্টারভিউ প্রশ্ন</h3>
